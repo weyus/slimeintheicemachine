@@ -4,7 +4,7 @@ class FacilitiesController < ApplicationController
   # GET /facilities
   # GET /facilities.json
   def index
-    @facilities = Facility.all
+    @facilities = Facility.limit(10)
   end
 
   # GET /facilities/1
