@@ -71,6 +71,7 @@ GEM
       multi_json (~> 1.0)
     geokit (1.6.5)
       multi_json
+    gmaps4rails (1.5.6)
     hike (1.2.2)
     i18n (0.6.4)
     interception (0.3)
@@ -182,6 +183,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   geokit
   geokit-rails3 (= 0.1.5)!
+  gmaps4rails
   jbuilder (~> 1.0.1)
   jquery-rails
   pg

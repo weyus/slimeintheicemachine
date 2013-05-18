@@ -14,6 +14,9 @@
   </thead>
 
   <tbody>
+
+  <%= gmaps4rails(@json) %>
+
     <% @facilities.each do |facility| %>
       <tr>
         <td><%= facility.id %></td>
