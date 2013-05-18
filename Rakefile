@@ -4,3 +4,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Slimeintheicemachine::Application.load_tasks
+
+#ecl
+
