@@ -4,15 +4,6 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.rc1'
 
-# Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
-end
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
 
@@ -42,6 +33,18 @@ gem 'bootstrap-sass', '~> 2.3.1.0'
 #Heroku Rails 4 gems
 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+
+# Use sqlite3 as the database for Active Record
+group :development do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-plus'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
