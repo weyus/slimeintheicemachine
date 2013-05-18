@@ -1,6 +1,22 @@
-class Facility < ActiveRecord::Base
-  def self.add_geocodes
+require 'geocoder'
 
+class Facility < ActiveRecord::Base
+  include Geocoder
+
+  scope :not_geocoded, -> {where(lat: nil).where(lng: nil)}
+
+  def self.add_geocodes
+    Facility.not_geocoded.each {|f| f.add_geocode}
+  end
+
+  def add_geocode
+    begin
+      address = "#{street_address} #{street_name} #{city} #{state} #{zip}"
+      coords = geocode(address)
+      update_attributes(lat: coords[0], lng: coords[1])
+    rescue Exception => e
+      logger.error("Error geocoding address #{address} for facility #{name} (#{id}): #{e.message}")
+    end
   end
 end
 
