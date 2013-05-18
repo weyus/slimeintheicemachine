@@ -1,3 +1,20 @@
 // Place all the styles related to the facilities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#sidebar {
+ background-color:#32cd32; 
+ padding:10px; 
+ border-radius:3px
+}
+
+
+.footer {
+    background-color: #F5F5F5;
+	border-radius:3px;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 70px;
+    padding: 30px 0;
+    text-align: center;
+}
