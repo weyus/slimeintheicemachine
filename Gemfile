@@ -38,6 +38,7 @@ group :development do
   gem 'pry-plus'
   gem 'sqlite3'
   gem 'annotate'
+  gem 'taps'
 end
 
 group :production do
