@@ -1,6 +1,11 @@
 require 'geocoder'
 
 class Facility < ActiveRecord::Base
+  acts_as_mappable :default_units   => :miles,
+                   :default_formula => :flat,
+                   :lat_column_name => :lat,
+                   :lng_column_name => :lng
+
   include Geocoder
 
   scope :not_geocoded, -> {where(lat: nil).where(lng: nil)}
