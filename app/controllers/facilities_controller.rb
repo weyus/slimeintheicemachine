@@ -5,7 +5,7 @@ class FacilitiesController < ApplicationController
   # GET /facilities.json
   def index
     @facilities = Facility.limit(10)
-    @json = Facilities.all.to_gmaps4rails
+    @json = Facility.limit(10).to_gmaps4rails
   end
 
   # GET /facilities/1

@@ -3,6 +3,14 @@ require 'geocoder'
 class Facility < ActiveRecord::Base
   include Geocoder
 
+  acts_as_gmappable :lat => "lat", :lng => "lng"
+
+  def gmaps4rails_address
+  # describe how to retrieve the address from your model, if you use directly a db column,
+  # you can dry your code, see wiki
+    "#{self.street_address} #{self.street_name}, #{self.city}, #{self.country}"
+  end
+
   scope :not_geocoded, -> {where(lat: nil).where(lng: nil)}
 
   def self.add_geocodes
