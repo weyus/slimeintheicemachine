@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130518182806) do
+ActiveRecord::Schema.define(version: 20130518202254) do
 
   create_table "facilities", force: true do |t|
     t.integer  "account_id"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20130518182806) do
     t.string   "inspector_id"
     t.string   "inspector_name"
     t.integer  "no_sites"
+    t.float    "lat"
+    t.float    "lng"
   end
 
   create_table "violations", force: true do |t|
