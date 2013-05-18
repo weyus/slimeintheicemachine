@@ -1,7 +1,7 @@
 class CreateFacilities < ActiveRecord::Migration
   def change
-    create_table :facilities do |t|
-      t.integer :account_id
+    create_table (:facilities, :id => false) do |t|
+      t.integer :id, :options => 'PRIMARY KEY'
       t.string :name
       t.string :street_address
       t.string :street_name
